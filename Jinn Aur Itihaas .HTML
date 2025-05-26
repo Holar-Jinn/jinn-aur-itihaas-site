@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jinn aur Itihaas</title>
+  <style>
+    :root {
+      --bg-color: #0d0d0d;
+      --text-color: #f0f0f0;
+      --primary-color: #00ffd1;
+      --hover-color: #ff6b81;
+      --section-bg: #1a1a1a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: var(--section-bg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    .logo img {
+      width: 60px;
+      height: 60px;
+      margin-right: 1rem;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--primary-color);
+      box-shadow: 0 0 10px var(--primary-color);
+    }
+    .logo h1 {
+      font-size: 2rem;
+      letter-spacing: 2px;
+      color: var(--primary-color);
+      margin: 0;
+    }
+    nav {
+      margin-bottom: 0.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav a {
+      margin: 0.5rem;
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+    nav a:hover { color: var(--hover-color); }
+    section {
+      padding: 2rem 1.5rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: var(--primary-color);
+      text-align: center;
+      font-size: 2rem;
+    }
+    iframe {
+      width: 100%;
+      height: 315px;
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 0 25px var(--primary-color);
+    }
+    .video-feed {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .social-links, .youtube-subscribe {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .social-links a {
+      margin: 0 1rem;
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    .social-links a:hover { color: var(--hover-color); }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 255, 209, 0.3);
+    }
+
+    .resources-list, .blog-list, .script-list {
+      margin-top: 1rem;
+      padding-left: 1rem;
+    }
+    .resources-list li, .blog-list li, .script-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    form {
+      max-width: 450px;
+      margin: 1rem auto;
+      display: flex;
+      flex-direction: column;
+    }
+    input, textarea {
+      padding: 10px;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      background-color: #222;
+      color: var(--text-color);
+      border: none;
+    }
+    button {
+      padding: 12px 20px;
+      background-color: var(--primary-color);
+      color: var(--bg-color);
+      font-weight: 700;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover { background-color: var(--hover-color); }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--section-bg);
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Jinn aur Itihaas Logo" />
+      <h1>Jinn aur Itihaas</h1>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#blogs">Blogs</a>
+      <a href="#scripts">Scripts</a>
+      <a href="#thumbnails">Thumbnails</a>
+      <a href="#sources">Sources</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Latest Videos</h2>
+    <div class="video-feed" id="videos"></div>
+    <div class="youtube-subscribe">
+      <iframe src="https://www.youtube.com/subscribe_embed?channelid=UCxFzSx5sH1fGxJ7TgWQ9fFw" style="height: 25px; width: 150px; border: none;"></iframe>
+    </div>
+    <div class="social-links">
+      <a href="https://www.youtube.com/@JinnaurItihaas" target="_blank">YouTube</a>
+      <a href="https://instagram.com/YourProfile" target="_blank">Instagram</a>
+      <a href="https://facebook.com/YourPage" target="_blank">Facebook</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      Jinn aur Itihaas is a storytelling channel blending historical depth with horror elements—featuring भूत, जिन्न, चुड़ैल, and legends. Presented in Hinglish, we target curious minds across India, Pakistan, Nepal, and Bangladesh who crave dark tales rooted in history.
+    </p>
+  </section>
+
+  <section id="blogs">
+    <h2>Our Blogs</h2>
+    <ul class="blog-list">
+      <li><a href="#">Bhangarh Fort: Itihaas aur Hahakar</a></li>
+      <li><a href="#">Jinn Culture in Mughal India</a></li>
+      <li><a href="#">Top 5 Haunted Places in Rajasthan</a></li>
+    </ul>
+  </section>
+
+  <section id="scripts">
+    <h2>Read Our Video Scripts</h2>
+    <ul class="script-list">
+      <li><a href="#">Episode 1 – Bhangarh Ka Pehla Raat</a></li>
+      <li><a href="#">Episode 2 – Chudail Ki Haveli</a></li>
+      <li><a href="#">Episode 3 – Jinn Ka Qila</a></li>
+    </ul>
+  </section>
+
+  <section id="thumbnails">
+    <h2>Our Thumbnails</h2>
+    <div class="gallery">
+      <img src="thumb1.jpg" alt="Thumbnail 1" />
+      <img src="thumb2.jpg" alt="Thumbnail 2" />
+      <img src="thumb3.jpg" alt="Thumbnail 3" />
+    </div>
+  </section>
+
+  <section id="sources">
+    <h2>Our Research Sources</h2>
+    <ul class="resources-list">
+      <li><a href="#">ASI Report on Bhangarh Fort (PDF)</a></li>
+      <li><a href="#">Historical Archive – Jaipur Forts</a></li>
+      <li><a href="#">Legends of Rajasthan – Oral Folklore</a></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formsubmit.co/jinnauritihaas@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p style="text-align:center; color: var(--primary-color);">Or email us directly at <a href="mailto:jinnauritihaas@gmail.com" style="color: var(--primary-color);">jinnauritihaas@gmail.com</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Jinn aur Itihaas | All rights reserved.
+  </footer>
+
+  <script>
+    const apiKey = 'AIzaSyBfYzrfOh6Zkb8_lN2ue9zUcVelKCi6CXE';  
+    const channelId = 'UCxFzSx5sH1fGxJ7TgWQ9fFw'; 
+    const maxResults = 3;
+
+    fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}`)
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('videos');
+        data.items.forEach(item => {
+          const videoId = item.id.videoId;
+          if (videoId) {
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://www.youtube.com/embed/${videoId}`;
+            iframe.allowFullscreen = true;
+            container.appendChild(iframe);
+          }
+        });
+      })
+      .catch(error => {
+        console.error('Error loading videos:', error);
+      });
+  </script>
+</body>
+</html>
